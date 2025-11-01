@@ -87,7 +87,7 @@ if para.noisy == 1
     kSpaceNoise = reshape([1, 1i] * para.noise_level * randn(2, para.res(1) * para.res(2) * para.res(3)), para.res);
     n = A(kSpaceNoise);
     % noise SNR
-    SNR_noisy = 10 * log10(norm(Y_down(:)) / norm(n(:)));
+    SNR_noisy = 20 * log10(norm(Y_down(:)) / norm(n(:)));
     fprintf('SNR_noisy: %.4f dB; \n', SNR_noisy)
     Y_down = Y_down + n;
 end
